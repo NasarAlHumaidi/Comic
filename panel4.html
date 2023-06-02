@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Soldier, Poet, King</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        .comic-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .comic-image {
+            width: 100%;
+            height: auto;
+            border: 2px solid black;
+            box-sizing: border-box;
+        }
+        
+        .next-button {
+            position: fixed;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            padding: 10px 30px;
+            background-color: #e74c3c;
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+        
+        .next-button:hover {
+            background-color: #c0392b;
+        }
+                
+        .click-me {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        
+        .click-me button {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            padding: 5px 10px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+        
+        .click-me button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="comic-container">
+        <img class="comic-image" src="img/panel4.jpg" alt="Comic 1">
+        <div class="click-me">
+            <button onclick="playSound()">Click Me</button>
+        </div>
+    </div>
+
+    <a href="panel5.html">
+        <button class="next-button">Next &rarr;</button>
+    </a>
+
+    <script>
+        function playSound() {
+            var audio = new Audio('img/paper.mp3');
+            audio.play();
+        }
+    </script>
+</body>
+</html>

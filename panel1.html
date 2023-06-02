@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Soldier, Poet, King</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        .comic-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .comic-image {
+            width: 100%;
+            height: auto;
+            border: 2px solid black;
+            box-sizing: border-box;
+        }
+        
+        .overlay-button {
+            position: absolute;
+            top: 25%;
+            right: 25%;
+            padding: 0;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .overlay-button img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            transition: box-shadow 0.3s ease-in-out;
+        }
+        
+        .overlay-button img:hover {
+            box-shadow: 0 0 10px 5px rgba(231, 76, 60, 0.7);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="comic-container">
+        <img class="comic-image" src="img/panel1.jpg" alt="Comic 1">
+    
+        <button class="overlay-button" onclick="playSoundAndNavigate()">
+            <img src="img/powerbutton1.png" alt="Button Image">
+        </button>
+    </div>
+
+    <script>
+        function playSoundAndNavigate() {
+            var audio = new Audio('img/ONsound.mp3');
+            audio.play();
+
+            audio.onended = function() {
+                window.location.href = "panel2.html";
+            };
+        }
+    </script>
+
+</body>
+</html>
